@@ -19,5 +19,3 @@ No hay cambios fundamentales con respecto a la versión hecha con **Create-React
   `npm run dev`
 
 - Realizar el desafío
-
--
