@@ -9,7 +9,7 @@ import "./App.css";
 const urlBaseServer = "http://localhost:3000";
 axios.defaults.baseURL = urlBaseServer;
 
-function App() {
+const App = () => {
   const [titulo, setTitulo] = useState("");
   const [imgSrc, setImgSRC] = useState("");
   const [descripcion, setDescripcion] = useState("");
@@ -60,6 +60,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

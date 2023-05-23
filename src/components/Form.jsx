@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Form({ setTitulo, setImgSRC, setDescripcion, agregarPost }) {
+const Form = ({ setTitulo, setImgSRC, setDescripcion, agregarPost }) => {
   return (
     <div className="form">
       <div className="mb-2">
@@ -32,7 +32,7 @@ function Form({ setTitulo, setImgSRC, setDescripcion, agregarPost }) {
       </div>
     </div>
   );
-}
+};
 
 Form.propTypes = {
   setTitulo: PropTypes.func.isRequired,

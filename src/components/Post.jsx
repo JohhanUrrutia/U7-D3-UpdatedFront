@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-function Post({
+const Post = ({
   post: { id, titulo, img, descripcion, likes },
   like,
   eliminarPost,
-}) {
+}) => {
   return (
     <div className="card col-12 col-sm-4 d-inline mx-0 px-3">
       <div className="card-body  p-0">
@@ -28,7 +28,7 @@ function Post({
       </div>
     </div>
   );
-}
+};
 
 Post.propTypes = {
   post: PropTypes.shape({
