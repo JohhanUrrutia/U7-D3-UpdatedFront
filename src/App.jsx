@@ -1,11 +1,13 @@
-import "./App.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 import Form from "./components/Form";
 import Post from "./components/Post";
-import { useState } from "react";
-import axios from "axios";
-import { useEffect } from "react";
+
+import "./App.css";
 
 const urlBaseServer = "http://localhost:3000";
+axios.defaults.baseURL = urlBaseServer;
 
 function App() {
   const [titulo, setTitulo] = useState("");
@@ -14,23 +16,23 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   const getPosts = async () => {
-    const { data: posts } = await axios.get(urlBaseServer + "/posts");
+    const { data: posts } = await axios.get("/posts");
     setPosts([...posts]);
   };
 
   const agregarPost = async () => {
     const post = { titulo, url: imgSrc, descripcion };
-    await axios.post(urlBaseServer + "/posts", post);
+    await axios.post("/posts", post);
     getPosts();
   };
 
   const like = async (id) => {
-    await axios.put(urlBaseServer + `/posts/like/${id}`);
+    await axios.put(`/posts/like/${id}`);
     getPosts();
   };
 
   const eliminarPost = async (id) => {
-    await axios.delete(urlBaseServer + `/posts/${id}`);
+    await axios.delete(`/posts/${id}`);
     getPosts();
   };
 
