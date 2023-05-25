@@ -12,7 +12,7 @@ axios.defaults.baseURL = urlBaseServer;
 const App = () => {
   const [titulo, setTitulo] = useState("");
   const [imgSrc, setImgSRC] = useState("");
-  const [descripcion, setDescripcion] = useState("");
+  const [descripcion, setDescripcion] = useState(""); 
   const [posts, setPosts] = useState([]);
 
   const getPosts = async () => {
@@ -21,7 +21,7 @@ const App = () => {
   };
 
   const agregarPost = async () => {
-    const post = { titulo, url: imgSrc, descripcion };
+    const post = { titulo, imgSrc, descripcion };
     await axios.post("/posts", post);
     getPosts();
   };

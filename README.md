@@ -1,21 +1,12 @@
-# Unidad 7 - Desafio 3: Frontend (Vite)
+Desafío Johhan Urrutia: Acceso a una base de datos Parte I
 
-Versión con dependencias actualizadas del material de apoyo para el desafío 3 (Postgres 1) de la unidad 7 (Node) del curso Full-Stack JavaScript impartido por Academia Desafio LATAM.
+Index.js (En carpeta raíz) = Peticiones con Express.
 
-## Cambios
+Carpeta DB:
+Index.js = Funciones DB Con PG.
+Postgres.sql = DB en postgresSQL.
 
-No hay cambios fundamentales con respecto a la versión hecha con **Create-React-App** en terminos de funcionalidad.
+Scripts:
 
-- Create-React-App se reemplazó por Vite
-- Se agregó prop validation a los componentes Post y Form.
-- Los componentes funcionales ahora tienen declaración de función de flecha.
-- Se agregó la URL base a las consultas de axios por medio de su propiedad `axios.defaults.baseURL` (DRY)
-
-## Instrucciones
-
-- Instalar dependencias:
-  `npm i`
-- Correr proyecto con:
-  `npm run dev`
-
-- Realizar el desafío
+Npm run nodemon: Servidor LocalHost:3000.
+Npm run dev: Servidor Vite.
